@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pham Nhat Thanh Portfolio</title>
+</head>
+<body>
+
+<h1>Pham Nhat Thanh</h1>
+
+<h2>Self Introduction</h2>
+<p>
+Hello, my name is Pham Nhat Thanh.
+I am a Computer Software student at Konkuk University.
+I am from Vietnam and currently studying in South Korea.
+</p>
+
+<h2>Resume</h2>
+
+<h3>Education</h3>
+<ul>
+<li>Konkuk University - Computer Software</li>
+<li>RMIT University Vietnam</li>
+<li>Gloucester High School, Canada</li>
+</ul>
+
+<h3>Experience</h3>
+<ul>
+<li>LTS Group - Administrative Assistant</li>
+<li>Esucare - Business Development Executive</li>
+</ul>
+
+<h2>AI Project - Running Pace Calculator</h2>
+
+<input type="number" id="distance" placeholder="Distance (km)">
+<input type="number" id="time" placeholder="Time (minutes)">
+
+<button onclick="calculatePace()">Calculate</button>
+
+<p id="result"></p>
+
+<script>
+function calculatePace() {
+    let distance = document.getElementById("distance").value;
+    let time = document.getElementById("time").value;
+
+    let pace = time / distance;
+
+    document.getElementById("result").innerHTML =
+        "Pace: " + pace.toFixed(2) + " min/km";
+}
+</script>
+
+</body>
+</html>
