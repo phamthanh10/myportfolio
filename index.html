@@ -1,52 +1,224 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Pham Nhat Thanh Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pham Nhat Thanh Portfolio</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      margin: 5px 0;
+    }
+
+    nav {
+      background: white;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #1e3c72;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #1e3c72;
+      border-bottom: 2px solid #1e3c72;
+      padding-bottom: 8px;
+    }
+
+    .card {
+      background: #f4f7fb;
+      padding: 18px;
+      margin: 15px 0;
+      border-radius: 10px;
+    }
+
+    input {
+      padding: 12px;
+      margin: 8px 0;
+      width: 95%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 12px 25px;
+      background: #1e3c72;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #2a5298;
+    }
+
+    #result {
+      font-size: 20px;
+      font-weight: bold;
+      color: #1e3c72;
+      margin-top: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #1e3c72;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>Pham Nhat Thanh</h1>
+<header>
+  <h1>Pham Nhat Thanh</h1>
+  <p>Computer Software Student | Konkuk University</p>
+  <p>Vietnamese student currently studying in South Korea</p>
+</header>
 
-<h2>Self Introduction</h2>
-<p>
-Hello, my name is Pham Nhat Thanh.
-I am a Computer Software student at Konkuk University.
-I am from Vietnam and currently studying in South Korea.
-</p>
+<nav>
+  <a href="#about">About Me</a>
+  <a href="#resume">Resume</a>
+  <a href="#project">AI Project</a>
+</nav>
 
-<h2>Resume</h2>
+<section id="about">
+  <h2>Self Introduction</h2>
 
-<h3>Education</h3>
-<ul>
-<li>Konkuk University - Computer Software</li>
-<li>RMIT University Vietnam</li>
-<li>Gloucester High School, Canada</li>
-</ul>
+  <p>
+    Hello, my name is Pham Nhat Thanh. I am from Vietnam and currently studying
+    Computer Software at Konkuk University in South Korea.
+  </p>
 
-<h3>Experience</h3>
-<ul>
-<li>LTS Group - Administrative Assistant</li>
-<li>Esucare - Business Development Executive</li>
-</ul>
+  <p>
+    I am interested in software development, technology, business, and global communication.
+    I enjoy learning new skills and improving myself through study, work, and personal challenges.
+  </p>
 
-<h2>AI Project - Running Pace Calculator</h2>
+  <p>
+    In my free time, I enjoy playing football, running, and indoor climbing.
+    One of my proudest achievements is completing a Half Marathon (21.1 km).
+  </p>
+</section>
 
-<input type="number" id="distance" placeholder="Distance (km)">
-<input type="number" id="time" placeholder="Time (minutes)">
+<section id="resume">
+  <h2>Resume</h2>
 
-<button onclick="calculatePace()">Calculate</button>
+  <div class="card">
+    <h3>Education</h3>
+    <ul>
+      <li>Konkuk University – Computer Software (2026–Present)</li>
+      <li>RMIT University Vietnam – Logistics (2021–2023)</li>
+      <li>Gloucester High School, Canada (2018–2020)</li>
+    </ul>
+  </div>
 
-<p id="result"></p>
+  <div class="card">
+    <h3>Work Experience</h3>
+    <ul>
+      <li>LTS Group – Administrative Assistant</li>
+      <li>Esucare – Business Development Executive</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Skills</h3>
+    <ul>
+      <li>Basic Programming (Python & Web)</li>
+      <li>Microsoft Office</li>
+      <li>Communication & Teamwork</li>
+      <li>English – IELTS 6.5</li>
+      <li>Korean Language Study</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Activities</h3>
+    <ul>
+      <li>Completed a Half Marathon (21.1 km)</li>
+      <li>Football Player</li>
+      <li>Running Enthusiast</li>
+      <li>Indoor Climbing</li>
+    </ul>
+  </div>
+</section>
+
+<section id="project">
+  <h2>AI Project: Running Pace Calculator</h2>
+
+  <p>
+    This simple web application was created with the help of AI tools.
+    It allows runners to calculate their average running pace based on
+    distance and total running time.
+  </p>
+
+  <label>Distance (km)</label>
+  <input type="number" id="distance" placeholder="Example: 5">
+
+  <label>Time (minutes)</label>
+  <input type="number" id="time" placeholder="Example: 25">
+
+  <button onclick="calculatePace()">Calculate Pace</button>
+
+  <p id="result">Pace: 0.00 min/km</p>
+</section>
+
+<footer>
+  <p>Created by Pham Nhat Thanh | AI-Assisted Web Project | 2026</p>
+</footer>
 
 <script>
 function calculatePace() {
-    let distance = document.getElementById("distance").value;
-    let time = document.getElementById("time").value;
+  let distance = document.getElementById("distance").value;
+  let time = document.getElementById("time").value;
 
-    let pace = time / distance;
-
+  if (distance <= 0 || time <= 0) {
     document.getElementById("result").innerHTML =
-        "Pace: " + pace.toFixed(2) + " min/km";
+      "Please enter valid numbers.";
+    return;
+  }
+
+  let pace = time / distance;
+
+  document.getElementById("result").innerHTML =
+    "Pace: " + pace.toFixed(2) + " min/km";
 }
 </script>
 
